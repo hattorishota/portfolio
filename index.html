@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/fullpage.min.css" />
+
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'vbb4bvl',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  </head>
+  <body class="top">
+
+    <!-- front area -->
+    <div class="wrapper">
+      
+      <!-- loading area -->
+      <div id="loader">
+        <div id="loader_bar"></div>
+        <div class="loader_cover loader_cover-up"></div>
+        <div class="loader_cover loader_cover-down"></div>
+      </div>
+
+      <!-- background area -->
+      <div id="particles-js">
+
+      </div>
+      <!-- background area -->
+
+      <!-- header area -->
+      <header class="header">
+        <nav class="nav">
+          <div class="left">
+            <div class="logo-box">
+              <span class="logo"
+                ><a href="./index.html" class="athelas-bold">HATTORI SHOTA</a></span
+              >
+            </div>
+          </div>
+          <div class="right">
+            <!-- ナビゲーションメニュー -->
+            <div class="nav-wrapper">
+              <nav class="header-nav">
+                <ul class="nav-list">
+                  <li class="nav-item">
+                    <a href="./index.html" class="athelas-reg">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./about.html" class="athelas-reg">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./works.html" class="athelas-reg">Works</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./skills.html" class="athelas-reg">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./contact.html" class="athelas-reg">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- ハンバーガーボタン -->
+            <div class="humberger">
+              <button class="burger-btn">
+                <span class="bar bar_top"></span>
+                <span class="bar bar_mid"></span>
+                <span class="bar bar_bottom"></span>
+              </button>
+              <span class="menu athelas-reg">Menu</span>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- header area -->
+
+      <!-- fullPage area -->
+      <main class="fullpage-wrap">
+        
+        <div id="fullpage">
+
+          <!-- fv -->
+          <section class="section first">
+            <div class="slide fv">
+              <div class="txt-box">
+                <h1 class="name athelas-bold">HATTORI SHOTA</h1>
+                <p class="position athelas-reg">WEB DEVELOPPER</p>
+              </div>
+              <div class="scrolldown">
+                <div class="arrow-box">
+                  <div class="arrow arrow1"><img src="./img/top/arrow.png" alt=""></div>
+                  <div class="arrow arrow2"><img src="./img/top/arrow.png" alt=""></div>
+                  <div class="arrow arrow3"><img src="./img/top/arrow.png" alt=""></div>
+                </div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- about -->
+          <section class="section bg-black btn-show">
+            <div class="even about">
+              <div class="wrap">
+                <div class="flex">
+                  <div class="txt-box">
+                    <p class="txt1 athelas-bold">Profile</p>
+                    <p class="txt2 yu-gothic">服部翔太（はっとりしょうた）</p>
+                    <p class="txt3 yu-gothic">
+                      はじめまして。服部 翔太と申します。<br>
+                      北海道札幌市在住、22歳。
+                    </p>
+                    <p class="txt4 yu-gothic">
+                      北海学園大学経営学部に在学しながらフリーランスエンジニアとして、 日々活動しております。<br>
+                      お客様に寄り添い、納得されるまでしっかりと責任感を持ってお仕事をさせていただきます。
+                    </p>
+                  </div>
+                  <div class="img"><img src="./img/about/Group 657.jpg" alt=""></div>
+                </div>
+                <div class="more"><a href="./about.html" class="athelas-reg">More profile</a></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- works -->
+          <section class="section bg-black">
+            <div class="odd works">
+              <div class="wrap">
+                <!-- スライダーのコンテナ -->
+                <div class="swiper">
+                  <!-- 必要に応じたwrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- スライド -->
+                    <div class="swiper-slide">
+                      <p class="cat athelas-bold">Coding</p>
+                      <div class="img">
+                        <img src="./img/works/Group 660.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="cat athelas-bold">Design</p>
+                      <div class="img">
+                        <img src="./img/works/Group 660.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="swiper-button-prev nav-round sp-only-900"></div>
+                  <div class="swiper-button-next nav-round sp-only-900"></div>
+                </div>
+                <div class="more"><a href="./works.html" class="athelas-reg">More works</a></div>
+              </div>
+              <div class="swiper-button-prev nav-round pc-only-900"></div>
+              <div class="swiper-button-next nav-round pc-only-900"></div>
+            </div>
+          </section>
+
+          <!-- skills -->
+          <section class="section">
+            <div class="even skills">
+              <div class="wrap">
+                <p class="s-title athelas-bold">Skills</p>
+                <div class="txt-box">
+                  <p class="language athelas-bold">HTML&CSS</p>
+                  <p class="level athelas-reg">
+                    HTMLとCSSを使った静的なサイトや、CSSでのアニメーションを用いた動的なサイトの作成が可能です。また、レスポンシブ対応も行えます。
+                  </p>
+                </div>
+                <div class="txt-box">
+                  <p class="language athelas-bold">JavaScript</p>
+                  <p class="level athelas-reg">
+                    サイト制作においてjQueryなどのライブラリを使用した制作が可能です。また、VueやReactといったフレームワークを利用したWebサービスの制作経験もあります。
+                  </p>
+                </div>
+                <div class="txt-box">
+                  <p class="language athelas-bold">PHP</p>
+                  <p class="level athelas-reg">
+                    HTMLとCSSを使った静的なサイトや、CSSでのアニメーションを用いた動的なサイトの作成が可能です。また、レスポンシブ対応も行えます。
+                  </p>
+                </div>
+                <div class="more"><a href="./skills.html" class="athelas-reg">More skills</a></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- contact -->
+          <section class="section bg-black">
+            <div class="odd contact">
+              <div class="wrap">
+                <p class="txt1 yu-gothic">
+                  お気軽に下記メールアドレスからご連絡ください。<br>
+                  <a href="./contact.html" class="border">こちら</a>から営業日などの確認が可能です。
+                </p>
+                <div class="txt-box">
+                  <div class="img"><img src="./img/contact/mail.png" alt=""></div>
+                  <a href="" class="athelas-reg">hshota.27@gmail.com</a>
+                </div>
+                <p class="txt2 yu-gothic">
+                  翌営業日までに返信いたします。<br>
+                  もし返信がない場合、お手数おかけいたしますが<br>
+                  <a href="./contact.html" class="border">こちら</a>の問い合わせフォームからもご連絡いただけますと幸いです。
+                </p>
+              </div>
+              <div class="footer">
+                <p class="copyright athelas-bold">©︎  HATTORI SHOTA</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- fullPage area -->
+
+    </div>
+
+    <!-- script area -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/progressbar.min.js"></script>
+    <script src="./js/scrolloverflow.min.js"></script>
+    <script src="./js/fullpage.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.inview.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

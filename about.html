@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fullpage.min.css" />
+
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "vbb4bvl",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="under-header">
+        <nav class="nav">
+          <div class="left">
+            <div class="logo-box">
+              <span class="logo"
+                ><a href="./index.html" class="athelas-bold">HATTORI SHOTA</a></span
+              >
+            </div>
+          </div>
+          <div class="right">
+            <!-- ナビゲーションメニュー -->
+            <div class="nav-wrapper">
+              <nav class="header-nav">
+                <ul class="nav-list">
+                  <li class="nav-item">
+                    <a href="./index.html" class="athelas-reg">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./about.html" class="athelas-reg">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./works.html" class="athelas-reg">Works</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./skills.html" class="athelas-reg">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./contact.html" class="athelas-reg">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- ハンバーガーボタン -->
+            <div class="humberger">
+              <button class="burger-btn">
+                <span class="bar bar_top"></span>
+                <span class="bar bar_mid"></span>
+                <span class="bar bar_bottom"></span>
+              </button>
+              <span class="menu athelas-reg">Menu</span>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- contents area -->
+      <div class="under">
+        <main class="main">
+          <div class="about">
+            <div class="wrap">
+              <div class="title-box">
+                <h1 class="title athelas-reg">Profile</h1>
+              </div>
+              <div class="contents">
+                <div class="img fadein"><img src="./img/about/Group 657.jpg" alt=""></div>
+                <div class="txt-box">
+                  <p class="txt fadein">
+                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+                    テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- contents area -->
+
+      <footer class="footer">
+        <p class="copyright athelas-bold">©︎  HATTORI SHOTA</p>
+      </footer>
+    </div>
+
+    <!-- script area -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/progressbar.min.js"></script>
+    <script src="./js/scrolloverflow.min.js"></script>
+    <script src="./js/fullpage.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.inview.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

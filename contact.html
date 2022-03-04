@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fullpage.min.css" />
+
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "vbb4bvl",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header area -->
+      <header class="under-header">
+        <nav class="nav">
+          <div class="left">
+            <div class="logo-box">
+              <span class="logo"
+                ><a href="./index.html" class="athelas-bold">HATTORI SHOTA</a></span
+              >
+            </div>
+          </div>
+          <div class="right">
+            <!-- ナビゲーションメニュー -->
+            <div class="nav-wrapper">
+              <nav class="header-nav">
+                <ul class="nav-list">
+                  <li class="nav-item">
+                    <a href="./index.html" class="athelas-reg">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./about.html" class="athelas-reg">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./works.html" class="athelas-reg">Works</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./skills.html" class="athelas-reg">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./contact.html" class="athelas-reg">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- ハンバーガーボタン -->
+            <div class="humberger">
+              <button class="burger-btn">
+                <span class="bar bar_top"></span>
+                <span class="bar bar_mid"></span>
+                <span class="bar bar_bottom"></span>
+              </button>
+              <span class="menu athelas-reg">Menu</span>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- header area -->
+
+      <!-- contents area -->
+      <div class="under">
+        <main class="main">
+          <div class="contact">
+            <div class="wrap">
+              <div class="title-box">
+                <h1 class="title athelas-reg">Contact</h1>
+              </div>
+              <div class="contents">
+                <div class="cover1">
+                  <div class="open-box">
+                    <p class="open-day yu-gothic">営業日について</p>
+                    <div class="calender-box fadein">
+
+                    </div>
+                  </div>
+                  <div class="attention">
+                    <p class="txt yu-gothic">制作案件の進行を優先するため、特に定期的な休業日は定めておりません。</p>
+                    <p class="txt yu-gothic">事前に把握できる場合やまとまったお休みを頂く場合はこちらでお知らせいたします。</p>
+                  </div>
+                </div>
+                <div class="cover2 fadein">
+                  <p class="txt1 yu-gothic">下記メールアドレスまたはフォームよりお問い合わせください。</p>
+                  <div class="txt-box">
+                    <div class="img"><img src="./img/contact/mail.png" alt=""></div>
+                    <a href="" class="athelas-reg">hshota.27@gmail.com</a>
+                  </div>
+                  <div class="attention">
+                    <p class="txt yu-gothic">翌営業日までにご返答いたします。下記営業日カレンダーもご確認ください。</p>
+                    <p class="txt yu-gothic">もし返信がない場合は「迷惑メール」フォルダもご確認ください。</p>
+                    <p class="txt yu-gothic">圧縮ファイルなどが添付されているメールには返信しておりません。</p>
+                  </div>
+                </div>
+                <div class="form fadein">
+                  <form class="contact-form" action="//www-creators.com/rsc/receiver.php" method="post">
+                    <div class="item yu-gothic">
+                      <label class="label" for="name_b" name="name">お名前</label>
+                      <input class="yu-gothic" id="name_b" type="text" placeholder="山田　太郎">
+                    </div>
+                    <div class="item yu-gothic">
+                      <label class="label" for="name_s" name="name">フリガナ</label>
+                      <input class="yu-gothic" id="name_s" type="text" placeholder="ヤマダ　タロウ">
+                    </div>
+                    <div class="item yu-gothic">
+                      <label class="label" for="e-mail">メールアドレス</label>
+                      <input class="yu-gothic" id="e-mail" type="email" name="email" placeholder="sample@mail.com">
+                    </div>
+                    <div class="item yu-gothic">
+                      <label class="label" for="address" name="name">住所</label>
+                      <input class="yu-gothic" id="" type="text" placeholder="札幌市中央区北3条西6丁目-8-28-405">
+                    </div>
+                    <div class="item yu-gothic">
+                      <label class="label" for="tel" name="name">電話番号</label>
+                      <input class="yu-gothic" id="" type="text" placeholder="011-231-4111">
+                    </div>
+                    <div class="item yu-gothic">
+                      <label class="label" for="message">お問い合わせ内容</label>
+                      <textarea rows="4" id="message" placeholder="こちらにご記入ください" name="comment"></textarea>
+                    </div>
+                    <div class="item no-label button">
+                      <input type="submit" value="確認画面へ">
+                      <a href="./contact-check.html">aa</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- contents area -->
+
+      <footer class="footer">
+        <p class="copyright athelas-bold">©︎  HATTORI SHOTA</p>
+      </footer>
+    </div>
+
+    <!-- script area -->
+    <script>
+      // テキストエリア高さ自動調整
+      let textarea = document.getElementById('message');
+
+      //textareaのデフォルトの要素の高さを取得
+      let clientHeight = textarea.clientHeight;
+
+      //textareaのinputイベント
+      textarea.addEventListener('input', ()=>{
+          //textareaの要素の高さを設定（rows属性で行を指定するなら「px」ではなく「auto」で良いかも！）
+          textarea.style.height = clientHeight + 'px';
+          //textareaの入力内容の高さを取得
+          let scrollHeight = textarea.scrollHeight;
+          //textareaの高さに入力内容の高さを設定
+          textarea.style.height = scrollHeight + 'px';
+      });
+    </script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/progressbar.min.js"></script>
+    <script src="./js/scrolloverflow.min.js"></script>
+    <script src="./js/fullpage.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.inview.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
