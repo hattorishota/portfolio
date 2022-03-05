@@ -6,34 +6,48 @@ script.js
 $(function () {
 
   // ハンバーガーメニュー
-  $(".burger-btn").on("click", function () {
+  var state = false;
+  var pos;
+  $(".burger-btn").click(function () {
     $(".burger-btn").toggleClass("close");
     $(".nav-wrapper").toggleClass("fade");
-    $("html, body").toggleClass("fixed");
+
+    if ($("body").hasClass("top")) {
+      $("html, body").toggleClass("fixed");
+    }
+
+    // ハンバーガーアイコン押した時に上に戻らない
+    if (state == false) {
+      pos = $(window).scrollTop();
+      $("body").addClass("fixed").css({ top: -pos });
+      state = true;
+    } else {
+      $("body").removeClass("fixed").css({ top: 0 });
+      window.scrollTo(0, pos);
+      state = false;
+    }
   });
 
   // fullPage.js
   $("#fullpage").fullpage({
     
-    // メニュー関連
+    // menu
     menu: "#top-menu",
     anchors: ["firstPage", "secondPage", "3rdPage"],
     navigation: true,
     navigationPosition: "left",
 
-    // スクロール関連
+    // scroll
     scrollOverflow: true,
     scrollingSpeed: 1500,
     fitToSectionDelay: 2000,
 
-    // 第一引数で設定されたアンカーリンク、第二引数で現在いた場所のindexを取得
-    // beforeLoad: function (anchorLink, beforeIndex) {
-    //   pagerCurrent(beforeIndex);
-    // },
+    // timing → scroll end
     afterLoad: function (anchorLink, afterIndex) {
       pagerCurrent(afterIndex);
     }
   });
+  
   // indexの値によって各フェードアウト
   function pagerCurrent(afterIndex) {
     // fv
@@ -78,9 +92,11 @@ $(function () {
     }
 
     if ($(window).width() < 600) {
+      // fv
       if (afterIndex.index === 0) {
 
       }
+      // about
       if (afterIndex.index === 1) {
         $('#fp-nav .ul li').removeClass('n-out')
         $('#fp-nav .ul li').removeClass('n-in')
@@ -90,6 +106,7 @@ $(function () {
         $('#fp-nav .ul li').eq(3).addClass('n-out');
         $('#fp-nav .ul li').eq(4).addClass('n-out');
       }
+      // works
       if (afterIndex.index === 2) {
         $('#fp-nav .ul li').removeClass('n-out')
         $('#fp-nav .ul li').removeClass('n-in')
@@ -99,6 +116,7 @@ $(function () {
         $('#fp-nav .ul li').eq(3).addClass('n-out');
         $('#fp-nav .ul li').eq(4).addClass('n-out');
       }
+      // skills
       if (afterIndex.index === 3) {
         $('#fp-nav .ul li').removeClass('n-out')
         $('#fp-nav .ul li').removeClass('n-in')
@@ -108,6 +126,7 @@ $(function () {
         $('#fp-nav .ul li').eq(3).addClass('n-in');
         $('#fp-nav .ul li').eq(4).addClass('n-out');
       }
+      // contact
       if (afterIndex.index === 4) {
         $('#fp-nav .ul li').removeClass('n-out')
         $('#fp-nav .ul li').removeClass('n-in')
@@ -131,15 +150,28 @@ $(function () {
 
   // Worksタブ
   let w_tabs = $(".w-tab");
+  let w_res = $(".w-res");
   $(".content-area .content").hide();
   $(".tab-all").addClass("active");
+  $(".w-res.tab-all").addClass("active");
   $(".content-area .all").removeClass("show").addClass("show").fadeIn();
-  $(w_tabs).on("click", function () {
-    $(".active").removeClass("active");
-    $(this).addClass("active");
-    const index = w_tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
-    $(".content-area .content").removeClass("show").eq(index).addClass("show").fadeIn();
-  });
+
+  if ($(window).width() < 900) {
+    $(".w-res").on("click", function () {
+      $(".active").removeClass("active");
+      $(this).addClass("active");
+      // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+      const index = w_res.index(this);
+      $(".content-area .content").removeClass("show").eq(index).addClass("show").fadeIn();
+    });
+  } else {
+    $(".w-tab").on("click", function () {
+      $(".active").removeClass("active");
+      $(this).addClass("active");
+      const index = w_tabs.index(this);
+      $(".content-area .content").removeClass("show").eq(index).addClass("show").fadeIn();
+    });
+  }
 
   // Skillsタブ
   let s_tabs = $(".s-tab");
@@ -286,6 +318,3 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-// ナビテキスト
-// document.querySelector("#fp-nav .ul li a .fp-sr-only").textContent = 'aaa';

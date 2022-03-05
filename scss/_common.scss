@@ -116,6 +116,22 @@ _common.scss
   }
 }
 
+.pc-only-600 {
+  display: block;
+}
+.sp-only-600 {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .pc-only-600 {
+    display: none !important;
+  }
+  .sp-only-600 {
+    display: block !important;
+  }
+}
+
 // 下層ページ共通
 .wrapper {
   .under {
@@ -176,6 +192,79 @@ _common.scss
     .copyright {
       font-size: 12px;
       color: #999999;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+
+    .under {
+      padding-top: 120px !important;
+  
+      .main {
+        .wrap {
+  
+          .title-box {
+            margin-bottom: 80px;
+  
+            .title {
+              font-size: 70px;
+  
+              &::after {
+                width: 30px;
+                margin-left: 20px;
+              }
+            }
+          }
+          .contents {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .footer {
+      height: 70px !important;
+      margin-top: 120px !important;
+  
+      &::before {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    .under {
+  
+      .main {
+        .wrap {
+  
+          .title-box {
+            margin-bottom: 60px;
+  
+            .title {
+              font-size: 50px;
+  
+              &::after {
+                width: 30px;
+                margin-left: 20px;
+              }
+            }
+          }
+          .contents {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .footer {
+      margin-top: 80px !important;
     }
   }
 }

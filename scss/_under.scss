@@ -65,11 +65,12 @@ _under.scss
 
           .burger-btn {
             display: block;
-            width: 39px;
-            height: 39px;
+            width: 20px;
+            height: 18px;
             position: relative;
             z-index: 3;
             border: none;
+            margin: 0 auto 10px;
 
             .bar {
               width: 20px;
@@ -81,14 +82,14 @@ _under.scss
               background-color: #fff;
             }
             .bar_top {
-              top: 10px;
+              top: 0;
             }
             .bar_mid {
               top: 50%;
               transform: translate(-50%, -50%);
             }
             .bar_bottom {
-              bottom: 10px;
+              bottom: 0;
             }
 
             &.close {
@@ -403,16 +404,99 @@ _under.scss
 
               .open-box {
                 text-align: center;
-                margin-bottom: 48px;
   
                 .open-day {
+                  font-size: 18px;
                   display: inline-block;
+                  margin: 0 auto 30px;
+                }
+                .calendar-box {
+                  max-width: 500px;
+                  width: 100%;
                   margin: 0 auto;
+
+                  .c-box1 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+  
+                    #c-header {
+                      font-size: 18px;
+                    }
+                    .c-check {
+                      display: flex;
+                      align-items: center;
+                
+                      .c-1 {
+                        display: flex;
+                        align-items: center;
+                        span {
+                          display: block;
+                        }
+                      }
+                      .square {
+                        width: 12px;
+                        height: 12px;
+                        margin-right: 12px;
+                      }
+                      .square.today {
+                        background-color: #141414;
+                      }
+                      .square.off {
+                        background-color: #ae7a26;
+                      }
+                    }
+                  }
+                  .calendar {
+                    text-align: center;
+                    width: 100%;
+                    margin-bottom: 20px;
+  
+                    table {
+                      border-collapse: collapse;
+                      width: 100%;
+  
+                      tr {
+  
+                        &:nth-child(3) {
+                          td {
+                            &:nth-child(3) {
+                              background-color: #ae7a26;
+                              color: #fff;
+                            }
+                          }
+                        }
+                        th,
+                        td {
+                          border: 1px solid #ddd;
+                          padding-top: 10px;
+                          padding-bottom: 10px;
+                          text-align: center;
+                        }
+                        td {
+                          &:first-child {
+                            color: red;
+                          }
+                          &:last-child {
+                            color: blue;
+                          }
+                          &.disabled {
+                            color: #999;
+                          }
+                          &.today {
+                            background-color: #232321;
+                            color: #fff;
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
               .attention {
                 text-align: left;
-                margin-top: 30px;
+                margin-top: 20px;
   
                 .txt {
                   font-size: 12px;
@@ -455,6 +539,9 @@ _under.scss
                 .txt {
                   font-size: 14px;
                   margin-bottom: 20px;
+                  padding-left: 1em;
+                  text-indent: -1em;
+                  line-height: 24px;
 
                   &::before {
                     content: "・";
@@ -468,8 +555,20 @@ _under.scss
             .form {
               margin-top: 150px;
 
+              .form-title-box {
+                text-align: center;
+                margin-bottom: 50px;
+
+                .form-title {
+                  display: inline-block;
+                  margin: 0 auto;
+                  font-size: 20px;
+                  font-weight: bold;
+                  padding-bottom: 10px;
+                  border-bottom: 1px solid #fff;
+                }
+              }
               .contact-form {
-                padding: 10px;
                 font-size: 16px;
                 max-width: 720px;
                 margin: 0 auto;
@@ -776,6 +875,429 @@ _under.scss
       }
       &:hover {
         margin-left: 0;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+
+    .under-header {
+
+      .nav {
+
+        .left {
+          left: 20px !important;
+        }
+        .right {
+          right: 20px !important;
+        }
+      }
+    }
+    .under {
+
+      .main {
+
+        .about {
+          .wrap {
+
+            .txt-box {
+              .txt {
+                font-size: 14px;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+      }
+      .works {
+        .wrap {
+          .tab-box {
+            position: relative;
+      
+            .works-tab {
+              position: unset !important;
+              top: unset !important;
+              left: unset !important;
+              
+              max-width: 830px;
+              width: 100%;
+              padding-bottom: 15px;
+              margin: 0 auto 80px;
+              overflow-x: scroll;
+              overflow-y: hidden;
+              white-space: nowrap;
+        
+              &::-webkit-scrollbar {
+                opacity: 0;
+              }
+              .w-tab {
+                position: relative;
+                font-size: 14px;
+                margin-right: 20px;
+                margin-bottom: 0;
+                transition: all 0.6s;
+                display: inline-block;  
+        
+                &::after {
+                  content: "";
+                  display: inline-block;
+                  position: absolute;
+                  bottom: -10px;
+                  left: 0;
+                  width: 100%;
+                  height: 1px;
+                  background-color: #fff;
+                  opacity: 0;
+                  transition: all 0.6s;
+                }
+                .tab-cat {
+                  display: inline-block;
+                  width: unset;
+                  cursor: pointer;
+                }
+                .round {
+                  display: none;
+                }
+                &:hover {
+                  margin-left: 0;
+        
+                  &::after {
+                    opacity: 1;
+                  }
+                }
+                &.active {
+                  padding-left: 0;
+        
+                  &::after {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+            .arrow {
+              max-width: 830px;
+              text-align: right;
+      
+              .move {
+                position: absolute;
+                top: 30px;
+                right: 0;
+                animation: arrowmove 2s ease-in-out infinite;
+                width: 40px;
+                height: 5px;
+              }
+              @keyframes arrowmove {
+                0% {
+                  right: 0%;
+                }
+                50% {
+                  right: 1%;
+                }
+                100% {
+                  right: 0%;
+                }
+              }
+            }
+          }
+          .content-area {
+
+            .content {
+              .flex {
+
+                .card {
+                  width: 46% !important;
+                  margin-bottom: 40px !important;
+
+                  .cat {
+                    margin: 20px 0;
+                  }
+                  .name {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .work {
+        .wrap {
+          .contents {
+            max-width: 500px !important;
+
+            .scope {
+              margin-bottom: 28px !important;
+
+              .part {
+                font-size: 14px;
+              }
+            }
+            .txt-box {
+
+              .txt {
+                line-height: 26px !important;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+      .thanks {
+        position: relative;
+        height: calc(100vh - 270px);
+        
+        .wrap {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          width: 100%;
+
+          .contents {
+  
+            .leading-box {
+              margin-bottom: 40px !important;
+            }
+            .txt-box {
+
+              .txt1 {
+                font-size: 18px !important;
+                line-height: 30px !important;
+                margin-bottom: 20px !important;
+              }
+              .txt2 {
+                font-size: 14px !important;
+                line-height: 24px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+
+    .under {
+
+      .main {
+
+        .about {
+          .wrap {
+
+            .img {
+              float: unset !important;
+              width: 280px !important;
+              height: 200px !important;
+              margin: 0 0 40px auto !important;
+  
+              img {
+                object-fit: cover;
+                object-position: bottom;
+                height: 100%;
+              }
+            }
+          }
+        }
+        .works {
+          .wrap {
+            .content-area {
+  
+              .content {
+                .flex {
+  
+                  .card {
+                    max-width: 370px;
+                    width: 100% !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .skills {
+          .wrap {
+            .skills-tab {
+
+              .flex {
+  
+                .s-tab {
+                  width: 100px !important;
+                  height: 24px !important;
+                  line-height: 24px !important;
+                  margin-right: 10px !important;
+                }
+              }
+            }
+            .arrow {
+              margin: 0 auto 80px !important;
+            }
+            .content-area {
+              .content {
+                font-size: 14px !important;
+
+                .experience {
+                  margin-bottom: 24px !important;
+                }
+              }
+            }
+          }
+        }
+        .contact {
+          .wrap {
+            .contents {
+  
+              .cover1 {
+                max-width: 580px;
+                width: 100%;
+                margin: 0 auto 150px;
+              }
+              .cover2 {
+                position: relative;
+                height: 100vh;
+
+                .cover {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  -webkit-transform: translate(-50%, -50%);
+                  -ms-transform: translate(-50%, -50%);
+                  width: 100%;
+
+                  .txt1 {
+                    line-height: 26px;
+                  }
+                  .txt-box {
+                    margin: 40px 0;
+          
+                    .img {
+                      width: 24px;
+                      height: 16px;
+                    }
+                    a {
+                      font-size: 20px;
+                    }
+                  }
+                  .attention {
+                    padding: 30px 15px;
+    
+                    .txt {
+                      font-size: 12px;
+                      margin-bottom: 12px;
+                    }
+                  }
+                }
+              }
+              .form {
+                margin-top: 150px;
+  
+                .contact-form {
+                  font-size: 16px;
+                  max-width: 720px;
+                  margin: 0 auto;
+            
+                  .item {
+                    display: block;
+                    margin-bottom: 40px;
+            
+                    &:last-child {
+                      margin-bottom: 0;
+                    }
+                    .label {
+                      display: inline-block;
+                      font-weight: bold;
+                      margin-bottom: 24px;
+                    }
+                    input {
+                      line-height: 30px;
+                      border-bottom: 1px solid #fff;
+                    }
+                    input[type=text],
+                    input[type=email],
+                    textarea {
+                      outline: none;
+                      display: block;
+                      width: 100%;
+                    }
+                    &::placeholder {
+                      color: #fff;
+                    }
+                    textarea {
+                      border: 1px solid #fff;
+                      resize: none;
+                      padding: 16px;
+                      min-height: 100px;
+                      line-height: 30px;
+                    }
+                  }
+                  .button {
+                    position: relative;
+                    display: block;
+                    width: 270px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin: 80px auto 0;
+                    text-align: center;
+                    color: #fff;
+                    border: 1px solid #fff;
+                    cursor: pointer;
+                    transition: all 0.6s;
+                    
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      bottom: 16px;
+                      right: 40px;
+                      width: 30px;
+                      height: 1px;
+                      background:#fff;
+                      transition: all .6s;
+                    }
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      bottom: 18px;
+                      right: 40px;
+                      width: 6px;
+                      height: 1px;
+                      background: #fff;
+                      transform: rotate(35deg);
+                      transition: all .6s;
+                    }
+                    input {
+                      position: relative;
+                      top: -3px;
+                      border-bottom: unset;
+                      transition: all .6s;
+                    }
+                    &:hover {
+                      
+                      input {
+                        opacity: 0.8;
+                      }
+                      &::before {
+                        right: 34px;
+                        opacity: 1;
+                      }
+                      &::after {
+                        right: 34px;
+                        opacity: 1;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
