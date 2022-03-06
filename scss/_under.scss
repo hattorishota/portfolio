@@ -138,6 +138,41 @@ _under.scss
                 line-height: 30px;
               }
             }
+            .txt-box1 {
+              margin-bottom: 30px;
+
+              .txt1 {
+                font-size: 18px;
+                line-height: 30px;
+              }
+            }
+            .txt-box2 {
+              margin-bottom: 20px;
+
+              .t-title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 4px;
+
+                &::before {
+                  content: "";
+                  display: inline-block;
+                  width: 20px;
+                  height: 1px;
+                  background-color: #fff;
+                  margin-right: 10px;
+                  vertical-align: middle;
+                }
+                .title {
+                  
+                }
+              }
+              .t-txt-box {
+                .txt1 {
+                  line-height: 30px;
+                }
+              }
+            }
           }
         }
       }
@@ -1114,7 +1149,7 @@ _under.scss
                 .flex {
   
                   .card {
-                    max-width: 370px;
+                    max-width: 400px;
                     width: 100% !important;
                   }
                 }

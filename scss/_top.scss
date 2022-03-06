@@ -893,7 +893,7 @@ _top.scss
   .top {
 
     #fp-nav {
-      top: 80px !important;
+      top: 60px !important;
       left: 20px !important;
       transform: unset !important;
 
@@ -961,10 +961,11 @@ _top.scss
       .header {
         .nav {
           .left {
+            top: 20px;
             left: 20px;
           }
           .right {
-            top: 40px;
+            top: 20px;
             right: 20px;
           }
         }
@@ -986,12 +987,26 @@ _top.scss
       .about {
         .wrap {
           max-width: 90%;
+
+          .flex {
+            .txt-box {
+              line-height: 22px;
+              
+              .txt2, .txt3, .txt4 {
+                font-size: 12px;
+              }
+            }
+          }
         }
       }
       .skills {
         .wrap {
           max-width: 90%;
           width: 100%;
+
+          .s-title {
+            display: none;
+          }
         }
       }
     }

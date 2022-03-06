@@ -32,6 +32,9 @@ html {
 
 html, body {
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Sections */
@@ -1685,7 +1688,7 @@ _top.scss
 
 @media screen and (max-width: 600px) {
   .top #fp-nav {
-    top: 80px !important;
+    top: 60px !important;
     left: 20px !important;
     -webkit-transform: unset !important;
             transform: unset !important;
@@ -1738,10 +1741,11 @@ _top.scss
     border-radius: 0;
   }
   .top .wrapper .header .nav .left {
+    top: 20px;
     left: 20px;
   }
   .top .wrapper .header .nav .right {
-    top: 40px;
+    top: 20px;
     right: 20px;
   }
   .top .wrapper .more {
@@ -1756,9 +1760,18 @@ _top.scss
   .top .wrapper .about .wrap {
     max-width: 90%;
   }
+  .top .wrapper .about .wrap .flex .txt-box {
+    line-height: 22px;
+  }
+  .top .wrapper .about .wrap .flex .txt-box .txt2, .top .wrapper .about .wrap .flex .txt-box .txt3, .top .wrapper .about .wrap .flex .txt-box .txt4 {
+    font-size: 12px;
+  }
   .top .wrapper .skills .wrap {
     max-width: 90%;
     width: 100%;
+  }
+  .top .wrapper .skills .wrap .s-title {
+    display: none;
   }
 }
 
@@ -1917,6 +1930,43 @@ _under.scss
 }
 
 .wrapper .under .main .about .wrap .contents .txt-box .txt {
+  line-height: 30px;
+}
+
+.wrapper .under .main .about .wrap .contents .txt-box1 {
+  margin-bottom: 30px;
+}
+
+.wrapper .under .main .about .wrap .contents .txt-box1 .txt1 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.wrapper .under .main .about .wrap .contents .txt-box2 {
+  margin-bottom: 20px;
+}
+
+.wrapper .under .main .about .wrap .contents .txt-box2 .t-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4px;
+}
+
+.wrapper .under .main .about .wrap .contents .txt-box2 .t-title::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.wrapper .under .main .about .wrap .contents .txt-box2 .t-txt-box .txt1 {
   line-height: 30px;
 }
 
@@ -2933,7 +2983,7 @@ _under.scss
     height: 100%;
   }
   .wrapper .under .main .works .wrap .content-area .content .flex .card {
-    max-width: 370px;
+    max-width: 400px;
     width: 100% !important;
   }
   .wrapper .under .main .skills .wrap .skills-tab .flex .s-tab {
